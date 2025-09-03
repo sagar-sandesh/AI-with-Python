@@ -1,4 +1,4 @@
-def tester(givenstring="Too short"):
+def checking(givenstring="Too short"):
     print(givenstring)
 
 def main():
@@ -9,8 +9,8 @@ def main():
             break
 
         if len(user_input) < 10:
-            tester()  # prints default "Too short"
+            checking() 
         else:
-            tester(user_input)  # prints the given input
+            checking(user_input)  
 
     main()
