@@ -1,7 +1,10 @@
-def checking(givenstring="Too short"):
-    print(givenstring)
+
 
 def main():
+
+    def checking(message="Too short"):
+        print(message)
+
     while True:
         user_input = input("Write something (quit ends): ").strip()
 
@@ -11,6 +14,7 @@ def main():
         if len(user_input) < 10:
             checking() 
         else:
-            checking(user_input)  
+            checking(user_input)
+
 
     main()
