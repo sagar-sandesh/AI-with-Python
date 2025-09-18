@@ -7,7 +7,7 @@ xp = my_data[:,0]
 yp = my_data[:,1]
 xp = xp.reshape(-1,1)
 yp = yp.reshape(-1,1)
-regr = LinearRegression()
+regr= LinearRegression()
 regr.fit(xp, yp)
 print(regr.coef_, regr.intercept_)
 xval =np.linspace(-0.5,2,100).reshape(-1,1)
@@ -19,6 +19,7 @@ plt.show()
 from sklearn import metrics
 
 yhat = regr.predict(xp)
+print ('Mean Absolute Error:', metrics.mean_absolute_error(yval, yhat))
 
 
 
