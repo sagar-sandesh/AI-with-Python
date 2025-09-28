@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-data = pd.read_csv("weight-height.csv")
+data = pd.read_csv("../Assignment 04/weight-height.csv")
 
 length_in = data["Height"]
 weight_lb = data["Weight"]
