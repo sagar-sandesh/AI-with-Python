@@ -52,3 +52,20 @@ plt.title('Lasso regression')
 plt.xlabel('alpha')
 plt.ylabel('r2')
 plt.show()
+
+# -------------------------------------------------
+# FINDINGS:
+#
+# The best Ridge regression is at alpha = 91.14 with R2 = 0.7717.
+# The best Lasso regression is  at alpha = 0.32 with R2 = 0.7749.
+# The value given by Lasso regression is slightly higher than Ridge regression.
+# This means both Ridge and LASSO models did a pretty good job at predicting car mileage, explaining about 77% of the variation and lasso came out just a little better than ridge.
+#
+# Explanation:
+# Both Ridge and LASSO improved generalization by preventing overfitting but they behave differently as ridge regression shrinks all the coefficients towards zero but keeps all features in the model while Lasso regression can shrink some coefficients exactly to zero and help in future selection.
+# The higher alpha for Ridge shows that stronger regularization was required to balance model complexity and avoid overfitting.
+# The lower alpha for LASSO shows that only certain regularization was enough as its nature is more agressive in eliminating unnecessary features.
+#
+#
+# -----------------------------------------------------
+
