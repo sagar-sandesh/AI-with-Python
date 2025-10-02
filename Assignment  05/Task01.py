@@ -78,7 +78,7 @@ print (f" R2  +bp+s4 is : {r2_train_bpS4:2f}")
 
 print(f"RMSE base(bmi+s5) is:  {rmse_train_base:2f}")
 print (f"RMSE bp is: {rmse_train_bp:2f} ")
-print(f"RMSE  +bp+s4 is: {rmse_train_bpS4:2f}")
+print(f"RMSE +bp+s4 is: {rmse_train_bpS4:2f}")
 
 
 print("Test metrics")

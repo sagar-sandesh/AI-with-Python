@@ -4,22 +4,23 @@
 ## Problem 1: Diabetes 
 ### Investigate the model for predicting Diabetes disease progression by adding more explanatory variables to it in addition to bmi and s5. 
 **a) Which variable would you add next? Why?** 
-I am choosing 'bp' as the Next variable as it has the strongest correlation to the target after bmi and s5.
+After looking at the correlations, I decided to add blood pressure (bp) as the next variable. It shows the strongest link to the target variable after BMI and s5.
 
 **b) How does adding it affect the model's performance? Compute metrics and compare to having just bmi 
 and s5.** 
-Adding 'bp' gives small but consistent improvements in test R2 and RMSE. The R2 increases slightly and
-RMSE decreases slightly.
+The scatter plot also supports this  as there is a clear upward trend between bp and the target.
 
 **d) Does it help if you add even more variables?** 
-Include your own findings and explanations in code comments or inside triple quotes.
-Each step above is worth a point. You need 2 points in order to complete this problem. 
+Including bp in the model gives a small but consistent boost. 
 
- Using bmi and s5 as the baseline, adding bp slightly improves performance. Test metrics  R2(bmi+s5) move from 0.482 to 0.491
-and RMSE(bmi+s5) decreases from 57.176 to 56.626 (bmi+s5+bp).
-Adding s4 does not help: the test metrics become R2 = 0.480 and RMSE = 57.260 (bmi+s5+bp+s4), which is worse than with bp.
+ 
+
+Explanation: 
+
+. Starting with BMI and  s5 after adding bp improves the R2 from 0.481561 to 0.491494 and RMSE decreses from 57.1759 to 56.6256
+. When adding s4 the performance is bad as R2 dropped to 0.480028 and RMSE increase to 57.260431.
+. This means the s4 is not reliable predictor for this problem.
 
 ### CONCLUSION:
-Therefore, based on these results, adding more variables is not benefiting us; three variables (bmi, s5, bp) are sufficient here.
-
+Adding bloop pressure(bp) helps a bit but adding s4 is rather than helping it is creating the noise. So, Adding more variable is not helping but rather its making noise. 
 ----
