@@ -50,3 +50,16 @@ print(f'The value of RMSE Train is {rmse_train}')
 print(f'The value of RMSE Test is {rmse_test}')
 print(f'The value of R2 Train is {r2_train}')
 print(f'The value of R2 Test is {r2_test}')
+
+
+# FINDINGS:
+# The value of Train RMSE  is 10421.578538827369
+# The value of Test RMSE  is 5901.149215894105
+# The value of Train R2 is 0.924881963476002
+# The value of Test R2 is 0.9798413266958587
+#
+# Explanation:
+# On the training data, the model explains 92.48% of the variation in profit. That means it learned the main patterns pretty well. The average prediction error is 10421.57.
+# On the test data the model does even better as 97.98% of the variation with an average error of only 5901.14.
+# So, as a conclusion the model is clearly handling the relationship between the R&D spending, marketinga nd profit and its not overfitting means good at predicting.
+
