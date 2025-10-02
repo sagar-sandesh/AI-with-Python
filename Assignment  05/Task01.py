@@ -71,17 +71,21 @@ rmse_test_bpS4  = root_mean_squared_error(y_testBpS4,  y_testBpS4_predict)
 r2_train_bpS4   = r2_score(y_trainBpS4, y_trainBpS4_predict)
 r2_test_bpS4    = r2_score(y_testBpS4,  y_testBpS4_predict)
 
-print("TRAIN metrics")
+print("Train metrics")
+print(f"R2  base(bmi+s5) is:  {r2_train_base:2f}" )
+print(f"R2  bp is:    {r2_train_bp:2f}")
+print (f" R2  +bp+s4 is : {r2_train_bpS4:2f}")
 
-print("Feature      base(bmi+s5) +bp    +bp+s4")
+print(f"RMSE base(bmi+s5) is:  {rmse_train_base:2f}")
+print (f"RMSE bp is: {rmse_train_bp:2f} ")
+print(f"RMSE  +bp+s4 is: {rmse_train_bpS4:2f}")
 
-print(f"R2          {r2_train_base:8.3f} {r2_train_bp:8.3f} {r2_train_bpS4:8.3f}")
-print(f"RMSE         {rmse_train_base:8.3f} {rmse_train_bp:8.3f} {rmse_train_bpS4:8.3f}")
 
+print("Test metrics")
 
-print("TEST metrics")
-
-print("Feature      base(bmi+s5)  +bp   +bp+s4")
-
-print(f"R2           {r2_test_base:8.3f} {r2_test_bp:8.3f} {r2_test_bpS4:8.3f}")
-print(f"RMSE         {rmse_test_base:8.3f} {rmse_test_bp:8.3f} {rmse_test_bpS4:8.3f}")
+print(f"R2 base(bmi+s5)  is :  {r2_test_base:8.3f}")
+print(f"R2  +bp  is: {r2_test_bp:8.3f}")
+print(f"R2 +bp + s4 is: {r2_test_bpS4:8.3f}")
+print(f"RMSE base(bmi+s5) is:  {rmse_test_base:8.3f}")
+print(f"RMSE +bp is: {rmse_test_bp:8.3f}")
+print(f"RMSE +bp+s4 is: {rmse_test_bpS4:8.3f}")
