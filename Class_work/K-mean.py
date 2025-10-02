@@ -1,3 +1,4 @@
+import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn import metrics
@@ -43,4 +44,18 @@ plt.show()
 
 metrics.ConfusionMatrixDisplay.from_estimator(classifier, x_test, y_test)
 plt.title("Confusion Matrix")
+plt.show()
+
+print (classification_report(y_test, y_train))
+
+error =[]
+for k in range(1,20):
+    knn = KNeighborsClassifier(n_neighbors=k)
+    knn.fit(x_train, y_train)
+    y_pred = knn.predict(x_test)
+    error.append(np.mean(y_pred != y_test))
+
+plt.plot(range(1,20), error, marker='o', markersize=10)
+plt.xlabel("k")
+plt.ylabel("Mean error")
 plt.show()

@@ -90,3 +90,4 @@ plt.ylabel("Exam 2 Score")
 plt.title("Scatter Plot of Predictions")
 plt.legend()
 plt.show()
+
